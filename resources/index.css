@@ -1,0 +1,238 @@
+@font-face {
+    font-family: "dbz";
+    src: url("/dbz.ttf");
+}
+
+@font-face {
+    font-family: "simple";
+    src: url("/simple.ttf");
+}
+@keyframes apparition {
+    from {
+        opacity: 0;
+
+        
+    }
+    to {
+        opacity: 1;
+        
+    }
+}
+
+
+
+#neutralinoapp {
+    text-align: center;
+    -webkit-user-select: none;
+    user-select: none;
+
+}
+
+#jeu {
+    width: 768;
+    height: 1366;
+    background-color: brown;
+    z-index: 0;
+}
+
+html,
+body {
+    user-select: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+    height: 100vh;
+    font-family: 'simple';
+}
+
+#carte {
+    width: 330px;
+    height: 500px;
+    background-color: rgb(114, 0, 0);
+    position: absolute;
+    top: 340px;
+    left: 300px;
+    transform: translate(-50%, -50%);
+    border: solid 0px black;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px black;
+    box-shadow: 0px 0px 2px rgb(0, 0, 0), 0px 0px 2px #000000 inset;
+}
+
+#carteimg {
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 3px rgb(0, 0, 0), 0px 0px 5px #000000 inset;
+    height: 310px;
+    width: 310px;
+    margin-top: 15px;
+    border-radius: 5px;
+   
+}
+
+#cartenom {
+    background-color: antiquewhite;
+    width: 93%;
+    height: 45px;
+    margin-top: 12px;
+    border-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 40px;
+    box-shadow: 0px 0px 3px rgb(0, 0, 0) inset;
+    font-family: 'simple';
+}
+
+#cartecôte {
+    background-color: orange;
+    border-radius: 90px;
+    width: 40px;
+    height: 40px;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 40px;
+    box-shadow: 0px 0px 3px rgb(0, 0, 0), 0px 0px 5px #000000 inset;
+    position: absolute;
+    top: 105px;
+    left: 40px;
+    transform: translate(-50%, -50%);
+    font-family: 'simple';
+}
+
+
+#carteatk::before {
+    content: "ATK  ";
+    color: rgb(255, 187, 0);
+    font-size: 15px;
+
+}
+
+#carteatk {
+    text-shadow: #000000 1px 1px 5px;
+    position: absolute;
+    top: 315px;
+    left: 18px;
+    font-size: 25px;
+    color: red;
+}
+
+#cartepv::before {
+    content: "PV  ";
+    color: rgb(255, 187, 0);
+    font-size: 15px;
+
+}
+
+#cartepv {
+    text-shadow: #000000 1px 1px 5px;
+    position: absolute;
+    top: 80px;
+    left: 240px;
+    font-size: 25px;
+    color: rgb(21, 255, 0);
+}
+
+
+#cartedef:before {
+    content: "DEF  ";
+    color: rgb(255, 187, 0);
+    font-size: 15px;
+
+}
+
+#cartedef {
+    text-shadow: #000000 1px 1px 5px;
+    position: absolute;
+    top: 345px;
+    left: 18px;
+    font-size: 25px;
+    color: rgb(0, 174, 255);
+
+}
+
+#cartespecial {
+    text-shadow: #000000 0px 0px 5px;
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 19px;
+    color: rgb(255, 0, 234);
+    background-color: #000000;
+    border-radius: 15px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+
+}
+
+#cartedescription {
+    background-color: antiquewhite;
+    margin-top: 38px;
+    width: 300px;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    box-shadow: 0px 0px 3px rgb(0, 0, 0) inset;
+}
+
+body {
+
+
+    background-color: rgb(0, 0, 0);
+
+}
+
+#blockmenu {
+    display: flex;
+    flex-direction: row;
+
+}
+
+#blockmenu :nth-child(3) {
+    color: white;
+    background-color: orange;
+    border-radius: 1px 5px;
+    border: solid 1px black;
+    padding: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+}
+
+#blockmenu p {
+
+    margin: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#blockmenu p:hover {
+
+    cursor: pointer;
+}
+
+#menu {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(51, 51, 51, 0.137);
+    border: solid 1px black;
+    border-radius: 10px;
+    z-index: 2;
+
+}

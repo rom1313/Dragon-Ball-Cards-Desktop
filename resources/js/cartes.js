@@ -1,0 +1,1 @@
+let gokupetit = new Carte("Goku Petit", 5, 3, 20, "Rage", "B", "Attaque deux fois en dessous de 8 pv","img/cartes/gokukid.webp")
