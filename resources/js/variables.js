@@ -1,3 +1,4 @@
+const genius = $
 let sceneActuelle;
 let joueur;
 let toucheclavier;
@@ -6,6 +7,8 @@ let nomjoueur;
 let nomadverse;
 let dialogueactif = false
 let joueurpremiertour;
+let joueurentraindejouer;
+
 
 let menu = document.querySelector("#menu")
 let carteatk = document.querySelector("#carteatk")
@@ -17,8 +20,20 @@ let cartecôte = document.querySelector("#cartecôte")
 let cartenom = document.querySelector("#cartenom")
 let carteimg = document.querySelector("#carteimg")
 
-const genius = $
+let indice = genius.nbaleatoire(2)
+let playlist = {
+    home: new Audio("son/home.mp3"),
+    combat1: new Audio("son/combat1.mp3"),
+    combat2: new Audio("son/combat2.mp3"),
+    combat3: new Audio("son/combat3.mp3"),
+    combat4: new Audio("son/combat4.mp3"),
+    combat5: new Audio("son/combat5.mp3"),
+    combat6: new Audio("son/combat6.mp3"),
+    defaite: new Audio("son/defaite.mp3"),
 
+
+
+}
 // TODO -------------------------------- Fonctions -------------------------------------
 
 function majCarte(carte) {
@@ -35,22 +50,23 @@ function majCarte(carte) {
 
 }
 function selectionjoueurpremiertour() {
-    let indice = genius.nbaleatoire(2)
+
     if (indice === 1) {
         joueurpremiertour = nomjoueur
         console.log('nb = 1');
         console.log(joueurpremiertour);
-        return joueurpremiertour
+        return nomjoueur
+
 
     }
     else if (indice === 2) {
         joueurpremiertour = nomadverse
         console.log('nb = 2');
         console.log(joueurpremiertour);
-        return joueurpremiertour
+        return nomadverse
     }
 
-
+    return
 
 
 }

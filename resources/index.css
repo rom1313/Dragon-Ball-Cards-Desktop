@@ -345,6 +345,25 @@ body {
     box-shadow: 0px 0px 3px rgb(0, 0, 0) inset;
 }
 
+@keyframes cartebrille {
+    from {
+
+
+        box-shadow: 0px 0px 2px rgb(0, 0, 0), 0px 0px 2px #000000 inset;
+    }
+
+    to {
+        box-shadow: 0px 0px 12px rgb(0, 255, 21), 0px 0px 2px #000000 inset;
+
+    }
+}
+
+
+.cartebrille {
+    animation: cartebrille 1s infinite alternate ease;
+
+}
+
 /* todo --------------------------------------------- Menu ------------------------------------------*/
 
 #blockmenu {
@@ -413,9 +432,66 @@ body {
 #nomjoueur {
     top: 50px;
     left: 300px;
+    color: antiquewhite;
+    text-shadow: #000000 1px 1px 2px;
 }
 
 #nomadverse {
     top: 50px;
     left: 1070px;
+    color: rgb(218, 0, 0);
+    text-shadow: #000000 1px 1px 2px;
+    z-index: 1;
+}
+
+#logotour {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50px;
+    left: 50%;
+
+    z-index: 0;
+}
+
+.logoinvisible {
+    display: none;
+}
+
+@keyframes logotouradverse {
+    from {
+        left: 220px;
+
+
+    }
+
+    to {
+        left: 1000px;
+
+    }
+}
+
+@keyframes logotourjoueur {
+    from {
+        left: 1000px;
+
+
+    }
+
+    to {
+        left: 220px;
+
+    }
+}
+
+.logotourjoueur {
+    animation: logotourjoueur 2s ease forwards;
+
+
+}
+
+.logotouradverse {
+
+    animation: logotouradverse 2s ease forwards;
+
+
 }
