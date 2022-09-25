@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
+<!-- todo -------------------------------------------------------- Head -------------------------------->
 
 <head>
   <meta charset="UTF-8">
   <title>NeutralinoJs sample app</title>
   <link rel="stylesheet" href="index.css">
   <script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
-
-
 </head>
+<!-- todo -------------------------------------------------------- Body -------------------------------->
 
 <body>
-
+  <!-- todo -------------------------------------------------------- Menu -------------------------------->
   <div id="menu">
     <div id="blockmenu">
       <p>News</p>
@@ -22,8 +22,9 @@
 
     </div>
   </div>
-
+  <!-- todo -------------------------------------------------------- Jeu -------------------------------->
   <div id="jeu">
+    <!-- todo -------------------------------------------------------- Carte -------------------------------->
     <div id="carte">
       <div id="cartenom">
         Goku Jr
@@ -35,20 +36,48 @@
       <div id="cartedef">30</div>
       <div id="cartedescription">Invoque un dragon pour faire des choses cool, mais aussi des choses etc etc</div>
       <div id="cartespecial">Senzu</div>
-
     </div>
+    <!-- todo -------------------------------------------------------- Carte Adverse -------------------------------->
+
+    <div id="carteadverse">
+      <div id="cartenomadverse">
+        Tortue Géniale
+      </div>
+      <div id="carteimgadverse"></div>
+      <div id="cartecôteadverse">S</div>
+      <div id="cartepvadverse">200</div>
+      <div id="carteatkadverse">50</div>
+      <div id="cartedefadverse">30</div>
+      <div id="cartedescriptionadverse">Invoque un dragon pour faire des choses cool, mais aussi des choses etc etc
+      </div>
+      <div id="cartespecialadverse">Senzu</div>
+    </div>
+
+    <!-- todo -------------------------------------------------------- Dialogues -------------------------------->
+    <div id="dialogue">
+    
+    </div>
+    <div id="nomjoueur">Invité</div>
+    <div id="nomadverse">kaito</div>
+
   </div>
+
+  <!-- todo -------------------------------------------------------- Scripts -------------------------------->
+
   <script src="js/neutralino.js"></script>
   <script src="https://unpkg.com/@rom13/genius-browser@1.0.52/index.js"></script>
-
   <script src="js/variables.js"></script>
   <script src="js/cartes.js"></script>
+  <script src="js/dialogues.js"></script>
   <script src="js/initialisation.js"></script>
   <script src="js/acceuil.js"></script>
   <script src="js/combat.js"></script>
+
   <script src="js/configPhaser.js"></script>
   <!-- Your app's source files -->
   <script src="js/main.js"></script>
+
+
 </body>
 
 </html>

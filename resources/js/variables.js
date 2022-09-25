@@ -2,7 +2,10 @@ let sceneActuelle;
 let joueur;
 let toucheclavier;
 let camera;
-
+let nomjoueur;
+let nomadverse;
+let dialogueactif = false
+let joueurpremiertour;
 
 let menu = document.querySelector("#menu")
 let carteatk = document.querySelector("#carteatk")
@@ -15,6 +18,7 @@ let cartenom = document.querySelector("#cartenom")
 let carteimg = document.querySelector("#carteimg")
 
 const genius = $
+
 // TODO -------------------------------- Fonctions -------------------------------------
 
 function majCarte(carte) {
@@ -30,6 +34,29 @@ function majCarte(carte) {
     carteimg.style.animation = "apparition 1s ease alternate forwards"
 
 }
+function selectionjoueurpremiertour() {
+    let indice = genius.nbaleatoire(2)
+    if (indice === 1) {
+        joueurpremiertour = nomjoueur
+        console.log('nb = 1');
+        console.log(joueurpremiertour);
+        return joueurpremiertour
+
+    }
+    else if (indice === 2) {
+        joueurpremiertour = nomadverse
+        console.log('nb = 2');
+        console.log(joueurpremiertour);
+        return joueurpremiertour
+    }
+
+
+
+
+}
+
+
+
 
 class Joueur {
 
