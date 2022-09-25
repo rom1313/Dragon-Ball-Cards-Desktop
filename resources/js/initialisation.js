@@ -36,6 +36,7 @@ genius.event("#jouer", "click", () => {
     }
 
     majCarte(gokupetit)
+    majCarteadverse(shenron)
     animationtour()
     
     genius.intervallesecondes('6', changementtour)

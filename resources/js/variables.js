@@ -9,7 +9,7 @@ let dialogueactif = false
 let joueurpremiertour;
 let joueurentraindejouer;
 
-
+// TODO -------------------------------- variable dom carte -------------------------------------
 let menu = document.querySelector("#menu")
 let carteatk = document.querySelector("#carteatk")
 let cartedef = document.querySelector("#cartedef")
@@ -19,8 +19,20 @@ let cartedescription = document.querySelector("#cartedescription");
 let cartecôte = document.querySelector("#cartecôte")
 let cartenom = document.querySelector("#cartenom")
 let carteimg = document.querySelector("#carteimg")
+// TODO -------------------------------- variable dom carte adverse -------------------------------------
+let carteatkadverse = document.querySelector("#carteatkadverse")
+let cartedefadverse = document.querySelector("#cartedefadverse")
+let cartepvadverse = document.querySelector("#cartepvadverse")
+let cartespecialadverse = document.querySelector("#cartespecialadverse")
+let cartedescriptionadverse = document.querySelector("#cartedescriptionadverse");
+let cartecôteadverse = document.querySelector("#cartecôteadverse")
+let cartenomadverse = document.querySelector("#cartenomadverse")
+let carteimgadverse = document.querySelector("#carteimgadverse")
 
+// TODO -------------------------------- indice aléatoire pour le premier tour -------------------------------------
 let indice = genius.nbaleatoire(2)
+
+// TODO -------------------------------- Playlist et Sons -------------------------------------
 let playlist = {
     home: new Audio("son/home.mp3"),
     combat1: new Audio("son/combat1.mp3"),
@@ -36,6 +48,8 @@ let playlist = {
 }
 // TODO -------------------------------- Fonctions -------------------------------------
 
+
+// TODO --------------------------------  Maj Carte Joueur -------------------------------------
 function majCarte(carte) {
     menu.style.display = "none"
     cartecôte.textContent = carte.côte
@@ -49,15 +63,30 @@ function majCarte(carte) {
     carteimg.style.animation = "apparition 1s ease alternate forwards"
 
 }
-function selectionjoueurpremiertour() {
+// TODO -------------------------------- Maj carte adverse  -------------------------------------
 
+function majCarteadverse(carte) {
+    menu.style.display = "none"
+    cartecôteadverse.textContent = carte.côte
+    carteatkadverse.textContent = carte.atk
+    cartedefadverse.textContent = carte.def
+    cartepvadverse.textContent = carte.pv
+    cartespecialadverse.textContent = carte.special
+    cartedescriptionadverse.textContent = carte.description
+    cartenomadverse.textContent = carte.nom
+    carteimgadverse.style.backgroundImage = `url(${carte.img})`
+    carteimgadverse.style.animation = "apparition 1s ease alternate forwards"
+
+}
+
+// TODO -------------------------------- selection premier tour-------------------------------------
+
+function selectionjoueurpremiertour() {
     if (indice === 1) {
         joueurpremiertour = nomjoueur
         console.log('nb = 1');
         console.log(joueurpremiertour);
         return nomjoueur
-
-
     }
     else if (indice === 2) {
         joueurpremiertour = nomadverse
@@ -65,14 +94,11 @@ function selectionjoueurpremiertour() {
         console.log(joueurpremiertour);
         return nomadverse
     }
-
     return
-
-
 }
 
 
-
+// TODO -------------------------------- Classe Joueur -------------------------------------
 
 class Joueur {
 
@@ -95,19 +121,10 @@ class Joueur {
         this.gemmes = 0;
         this.amis = [""];
         this.tour = false
-
-
-
     }
-
-
-
-
-
-
-
-
 }
+
+// TODO -------------------------------- class carte -------------------------------------
 
 class Carte {
 

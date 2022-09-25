@@ -5,13 +5,6 @@
 
 
 
-function openDocs() {
-    Neutralino.os.open("https://neutralino.js.org/docs");
-}
-
-function openTutorial() {
-    Neutralino.os.open("https://www.youtube.com/watch?v=txDlNNsgSh8&list=PLvTbqpiPhQRb2xNQlwMs0uVV0IN8N-pKj");
-}
 
 function setTray() {
     if (NL_MODE != "window") {

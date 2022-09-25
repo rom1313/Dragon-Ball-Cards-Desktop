@@ -1,5 +1,8 @@
 nomadverse = "Kaïto"
 let premiertour = true
+
+// TODO -------------------------------- Animation de tour -------------------------------------
+
 function animationtour() {
 
     if (joueurentraindejouer === nomjoueur) {
@@ -7,9 +10,6 @@ function animationtour() {
             premiertour = false
             genius.timeursecondes('2', () => {
                 document.querySelector("#logotour").classList.remove('logoinvisible')
-
-
-
             })
             document.querySelector("#logotour").classList.remove('logotouradverse')
             document.querySelector("#logotour").classList.add('logotourjoueur')
@@ -21,20 +21,13 @@ function animationtour() {
             document.querySelector("#carte").classList.add('cartebrille')
             document.querySelector("#logotour").classList.remove('logotouradverse')
             document.querySelector("#logotour").classList.add('logotourjoueur')
-
         }
-
-
-
-
     }
     else if (joueurentraindejouer != nomjoueur) {
         if (premiertour === true) {
             premiertour = false
             genius.timeursecondes('2', () => {
                 document.querySelector("#logotour").classList.remove('logoinvisible')
-
-
             })
             document.querySelector("#logotour").classList.remove('logotourjoueur')
             document.querySelector("#logotour").classList.add('logotouradverse')
@@ -46,12 +39,11 @@ function animationtour() {
             document.querySelector("#carteadverse").classList.add('cartebrille')
             document.querySelector("#logotour").classList.remove('logotourjoueur')
             document.querySelector("#logotour").classList.add('logotouradverse')
-
         }
-
     }
-
 }
+
+// TODO -------------------------------- Changement de tour -------------------------------------
 
 function changementtour() {
     if (joueurentraindejouer === nomjoueur) {
