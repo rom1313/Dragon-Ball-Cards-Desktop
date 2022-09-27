@@ -46,6 +46,8 @@ body {
     -webkit-user-select: none;
     user-select: none;
     text-align: center;
+    cursor: url('./img/mouse.png'), default;
+
 }
 
 body {
@@ -182,6 +184,8 @@ body {
     padding-right: 6px;
     padding-top: 1px;
     padding-bottom: 1px;
+    cursor: url('./img/mouse2.png'), pointer;
+
 
 }
 
@@ -327,6 +331,8 @@ body {
     padding-right: 6px;
     padding-top: 1px;
     padding-bottom: 1px;
+    cursor: pointer;
+    cursor: url('./img/mouse2.png'), pointer;
 
 }
 
@@ -388,11 +394,12 @@ body {
     margin: 25px;
     margin-top: 5px;
     margin-bottom: 5px;
+
 }
 
 #blockmenu p:hover {
+    cursor: url('./img/mouse2.png'), pointer;
 
-    cursor: pointer;
 }
 
 #menu {

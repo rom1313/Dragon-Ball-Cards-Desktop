@@ -20,7 +20,7 @@ genius.event("#jouer", "click", () => {
 
     genius.timeursecondes('3', () => {
         dialogue()
-        
+
     })
     if (joueurpremiertour === nomjoueur) {
         document.querySelector("#carte").classList.add('cartebrille')
@@ -32,13 +32,13 @@ genius.event("#jouer", "click", () => {
         joueurentraindejouer = nomadverse
         document.querySelector("#carte").classList.add('cartebrille')
         console.log(`Le joueur en train de jouer est ${joueurentraindejouer}`);
-        
+
     }
 
     majCarte(gokupetit)
-    majCarteadverse(shenron)
+    majCarteadverse(chichi)
     animationtour()
-    
+
     genius.intervallesecondes('6', changementtour)
 
 
