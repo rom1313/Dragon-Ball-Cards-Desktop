@@ -1,6 +1,7 @@
 let combat
 
 class Combat extends Phaser.Scene {
+    
     constructor() {
         super("Combat");
     }

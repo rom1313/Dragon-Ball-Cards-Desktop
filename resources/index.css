@@ -184,9 +184,15 @@ body {
     padding-right: 6px;
     padding-top: 1px;
     padding-bottom: 1px;
+
+
+
+}
+
+#cartespecial:hover {
+    box-shadow: 0px 0px 30px rgb(104, 104, 104) inset;
     cursor: url('./img/mouse2.png'), pointer;
-
-
+    color: rgb(0, 255, 21)
 }
 
 #cartedescription {
@@ -204,8 +210,44 @@ body {
     box-shadow: 0px 0px 3px rgb(0, 0, 0) inset;
 }
 
-/* todo --------------------------------------------- Carte adverse ------------------------------------------*/
+#atklogojoueur,
+#atklogoadverse,
+#deflogojoueur,
+#deflogoadverse {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 660px;
+    background-color: antiquewhite;
+    border-radius: 90px;
+    box-shadow: 0px 0px 3px rgb(0, 0, 0) inset;
+}
 
+#atklogojoueur {
+    left: 220px;
+}
+
+#deflogojoueur {
+    left: 380px;
+}
+
+#atklogojoueur:hover {
+    cursor: url('./img/mouse2.png'), pointer;
+    box-shadow: 0px 0px 12px rgb(0, 255, 21), 0px 0px 2px #000000 inset;
+}
+
+#deflogojoueur:hover {
+    cursor: url('./img/mouse2.png'), pointer;
+    box-shadow: 0px 0px 12px rgb(0, 255, 21), 0px 0px 2px #000000 inset;
+}
+
+/* todo --------------------------------------------- Carte adverse ------------------------------------------*/
+/* #atklogoadverse {
+    left: 1000px;
+}
+
+#deflogoadverse {
+    left: 1150px;
+} */
 #carteadverse {
     width: 330px;
     height: 500px;
@@ -331,8 +373,8 @@ body {
     padding-right: 6px;
     padding-top: 1px;
     padding-bottom: 1px;
-    cursor: pointer;
-    cursor: url('./img/mouse2.png'), pointer;
+
+
 
 }
 

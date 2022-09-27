@@ -2,7 +2,7 @@ console.log('initialisation')
 joueur = new Joueur('invité')
 nomjoueur = joueur.pseudo
 
-playlist.home.play()
+playlist.menu.home.play()
 
 
 console.log(joueur);
@@ -10,11 +10,13 @@ console.log(joueur);
 genius.event("#jouer", "click", () => {
     joueurpremiertour = selectionjoueurpremiertour()
     game.scene.start("Combat", "Acceuil");
-    playlist.home.pause()
-    playlist.combat1.play()
+    playlist.menu.home.pause()
+    playlist.combat.combat1.play()
+   
 
     dialogueactif = true
     dialogue('Que le combat commence !')
+
 
 
 
@@ -32,14 +34,21 @@ genius.event("#jouer", "click", () => {
         joueurentraindejouer = nomadverse
         document.querySelector("#carte").classList.add('cartebrille')
         console.log(`Le joueur en train de jouer est ${joueurentraindejouer}`);
+        genius.timeursecondes('4', () => {
+            actionadverse()
+        })
 
     }
 
     majCarte(gokupetit)
-    majCarteadverse(chichi)
-    animationtour()
 
-    genius.intervallesecondes('6', changementtour)
+    carteencoursjoueur = { ...gokupetit }
+    majCarteadverse(chichi)
+    cartencoursadverse = { ...chichi }
+    animationtour()
+    actionencours = false
+
+
 
 
 })

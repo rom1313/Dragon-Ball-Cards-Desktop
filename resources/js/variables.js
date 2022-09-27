@@ -8,6 +8,12 @@ let nomadverse;
 let dialogueactif = false
 let joueurpremiertour;
 let joueurentraindejouer;
+let carteencoursjoueur;
+let cartencoursadverse;
+
+let actionencours = true
+
+
 
 // TODO -------------------------------- variable dom carte -------------------------------------
 let menu = document.querySelector("#menu")
@@ -34,16 +40,36 @@ let indice = genius.nbaleatoire(2)
 
 // TODO -------------------------------- Playlist et Sons -------------------------------------
 let playlist = {
-    home: new Audio("son/home.mp3"),
-    combat1: new Audio("son/combat1.mp3"),
-    combat2: new Audio("son/combat2.mp3"),
-    combat3: new Audio("son/combat3.mp3"),
-    combat4: new Audio("son/combat4.mp3"),
-    combat5: new Audio("son/combat5.mp3"),
-    combat6: new Audio("son/combat6.mp3"),
-    defaite: new Audio("son/defaite.mp3"),
+    combat: {
+        combat1: new Audio("son/combat1.mp3"),
+        combat2: new Audio("son/combat2.mp3"),
+        combat3: new Audio("son/combat3.mp3"),
+        combat4: new Audio("son/combat4.mp3"),
+        combat5: new Audio("son/combat5.mp3"),
+        combat6: new Audio("son/combat6.mp3"),
+        defaite: new Audio("son/defaite.mp3"),
+    },
+    menu: {
+        home: new Audio("son/home.mp3"),
 
 
+    }
+
+
+
+
+
+
+}
+
+function tchekplayliste(titre) {
+    if (!titre.paused) {
+        
+        playlist[i]
+    }
+    else {
+
+    }
 
 }
 // TODO -------------------------------- Fonctions -------------------------------------
