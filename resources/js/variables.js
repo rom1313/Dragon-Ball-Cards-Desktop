@@ -131,9 +131,6 @@ class Joueur {
     constructor(pseudo) {
         this.pseudo = pseudo;
         this.argent = 0;
-        this.sante = 0;
-        this.attaque = 0;
-        this.defense = 0;
         this.niveau = 1;
         this.xp = 0;
         this.pass = "0000";
@@ -146,7 +143,8 @@ class Joueur {
         this.messages = [""];
         this.gemmes = 0;
         this.amis = [""];
-        this.tour = false
+        this.deck = ["","","","",""]
+        
     }
 }
 

@@ -83,18 +83,24 @@ function action(choix) {
             dialogue(`${joueurentraindejouer} inflige ${degats} de dégats !`)
             if (cartencoursadverse.modedef === true) {
                 dialogue(`${cartencoursadverse.nom} ne reçoit que ${degats - cartencoursadverse.modedefvalue} de dégats !`)
-                nouveaupv = cartencoursadverse.pv - degats + cartencoursadverse.modedefvalue
+                if (degats - cartencoursadverse.modedefvalue < 1) {
+                    nouveaupv = cartencoursadverse.pv - 0
+                }
+                else {
+                    nouveaupv = cartencoursadverse.pv - degats + cartencoursadverse.modedefvalue
+                }
+
 
 
 
                 if (cartencoursadverse.pv - (degats - cartencoursadverse.modedefvalue) <= 0) {
                     cartepvadverse.textContent = "K.O"
-                    dialogue(`${cartencoursadverse.nom} est K.O !`)
+                    dialogue(`${carteencoursadverse.nom} est K.O !`)
                     majCarteadverse(lunch)
-                    cartencoursadverse = { ...lunch }
-                    console.log(cartencoursadverse);
+                    carteencoursadverse = { ...lunch }
+                    console.log(carteencoursadverse);
                     genius.timeursecondes('2', () => {
-                        dialogue(`${nomadverse} joue maintenant ${cartencoursadverse.nom}`)
+                        dialogue(`${nomadverse} joue maintenant ${carteencoursadverse.nom}`)
                         genius.timeursecondes('2', () => {
                             changementtour()
                             actionencours = false
@@ -172,19 +178,79 @@ function action(choix) {
 
 
 }
-// TODO -------------------------------- Changement de tour adverse-------------------------------------
+// TODO -------------------------------- Action de tour adverse-------------------------------------
 function actionadverse() {
     let choixadverse = genius.nbaleatoire(3)
     console.log(choixadverse);
+    let degatsadverse = cartencoursadverse.atk
     if (choixadverse === 1) {
         genius.timeursecondes('1', () => {
             dialogue(`${joueurentraindejouer} a choisi d'attaquer !`)
             genius.timeursecondes('2', () => {
-                dialogue(`${joueurentraindejouer} inflige ${cartencoursadverse.atk} de dégats !`)
+                dialogue(`${joueurentraindejouer} inflige ${degatsadverse} de dégats !`)
+                if (carteencoursjoueur.modedef === true) {
+                    dialogue(`${carteencoursjoueur.nom} ne reçoit que ${degatsadverse - carteencoursjoueur.modedefvalue} de dégats !`)
+                    nouveaupv = carteencoursjoueur.pv - degatsadverse + carteencoursjoueur.modedefvalue
+
+
+
+                    if (carteencoursjoueur.pv - (degatsadverse - carteencoursjoueur.modedefvalue) <= 0) {
+                        cartepv.textContent = "K.O"
+                        dialogue(`${carteencoursjoueur.nom} est K.O !`)
+                        majCarte(lunch)
+                        carteencoursjoueur = { ...lunch }
+                        console.log(carteencoursjoueur);
+                        genius.timeursecondes('2', () => {
+                            dialogue(`${nomjoueur} joue maintenant ${carteencoursjoueur.nom}`)
+                            genius.timeursecondes('2', () => {
+                                changementtour()
+
+                            })
+
+                        })
+                    }
+                    else {
+                        carteencoursjoueur.pv = nouveaupv
+                        cartepv.textContent = nouveaupv
+                        delete carteencoursjoueur.modedef
+                        delete carteencoursjoueur.modedefvalue
+                        genius.timeursecondes(2, () => {
+                            changementtour()
+
+                        })
+
+                    }
+                }
+                else {
+                    if (carteencoursjoueur.pv - degatsadverse <= 0) {
+                        cartepv.textContent = "K.O"
+                        dialogue(`${carteencoursjoueur.nom} est K.O !`)
+                        majCarte(lunch)
+                        carteencoursjoueur = { ...lunch }
+                        console.log(carteencoursjoueur);
+                        genius.timeursecondes('2', () => {
+                            dialogue(`${nomjoueur} joue maintenant ${carteencoursjoueur.nom}`)
+                            genius.timeursecondes('2', () => {
+                                changementtour()
+
+                            })
+
+                        })
+                    }
+                    else {
+                        nouveaupv = carteencoursjoueur.pv - degatsadverse
+                        carteencoursjoueur.pv = nouveaupv
+                        cartepv.textContent = nouveaupv
+                        genius.timeursecondes(2, () => {
+                            changementtour()
+
+                        })
+
+                    }
+                }
+
             })
-            genius.timeursecondes('3', () => {
-                changementtour()
-            })
+
         })
 
 
