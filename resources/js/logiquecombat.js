@@ -95,7 +95,7 @@ function action(choix) {
 
                 if (cartencoursadverse.pv - (degats - cartencoursadverse.modedefvalue) <= 0) {
                     cartepvadverse.textContent = "K.O"
-                    dialogue(`${carteencoursadverse.nom} est K.O !`)
+                    dialogue(`${cartencoursadverse.nom} est K.O !`)
                     majCarteadverse(lunch)
                     carteencoursadverse = { ...lunch }
                     console.log(carteencoursadverse);
